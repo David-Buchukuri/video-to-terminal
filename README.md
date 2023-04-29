@@ -8,7 +8,7 @@ git clone https://github.com/David-Buchukuri/video-to-terminal
 
 <br>
 
-2\. go to root of the project and install dependencies
+2\. go to the root of the project and install dependencies
 
 ```sh
 pip install -r requirments.txt
