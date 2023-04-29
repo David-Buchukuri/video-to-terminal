@@ -18,11 +18,12 @@ pip install -r requirments.txt
 
 3\. to generate frames from the video run `generateFrames.py` file
 
-4\. to render generated frames in the terminal run `index.py` file
+4\. to render generated frames in the terminal run `index.py` file. Don't forget to zoom out your terminal a bit.
 
-5\. to generate frames from your own videos, add desired video in `videos` folder, and in `generateFrames.py` replace function argument on line number 38 with the path of your file, then go through step number 3 and 4 again.
+5\. to generate frames from your own videos, add desired video in `videos` folder, and in `generateFrames.py` replace function argument on line number 38 with the path of your file, if video contains any colors other than black and white you need to pass `True` as a second argument.
+then go through step number 3 and 4 again.
 
-recommended format for videos are mp4, other formats might work as well too, but this script is tested using only mp4 files.
+recommended format for videos are mp4, other formats might work as well, but this script is tested using only mp4 files.
 
 <br>
 <br>
