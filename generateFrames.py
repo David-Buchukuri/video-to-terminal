@@ -1,5 +1,6 @@
 import cv2
 import os
+import shutil
 
 
 def generateFrames(path):
@@ -7,8 +8,10 @@ def generateFrames(path):
 
     frameNumber = 0
 
-    if not os.path.exists('./frames'):
-        os.makedirs('./frames')
+    if os.path.exists('./frames'):
+        shutil.rmtree('./frames')
+
+    os.makedirs('./frames')
 
     while (True):
         success, frame = capture.read()
