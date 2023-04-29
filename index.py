@@ -25,7 +25,7 @@ for i in range(len(frameFiles)):
         if (i % imageWidth == 0):
             frame += '\n'
 
-    os.system('clear')
+    os.system('cls || clear')
 
     print(frame)
 
