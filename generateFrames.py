@@ -3,7 +3,7 @@ import os
 import shutil
 
 
-def generateFrames(path):
+def generateFrames(path, color=False):
     capture = cv2.VideoCapture(path)
 
     frameNumber = 0
@@ -19,6 +19,10 @@ def generateFrames(path):
         if success:
             resizedFrame = cv2.resize(frame, (120, 90))
 
+            if color:
+                grayFrame = cv2.cvtColor(resizedFrame, cv2.COLOR_BGR2GRAY)
+                resizedFrame = cv2.Canny(grayFrame, 100, 200)
+
             cv2.imwrite(
                 f'./frames/frame-' + str(frameNumber) + '.png', resizedFrame
             )
@@ -31,4 +35,4 @@ def generateFrames(path):
     capture.release()
 
 
-generateFrames('./bad-apple.mp4')
+generateFrames('./videos/bad-apple.mp4')
