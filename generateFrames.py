@@ -36,3 +36,6 @@ def generateFrames(path, color=False):
 
 
 generateFrames('./videos/bad-apple.mp4')
+# generateFrames('./videos/kiritsugu.mp4', True)
+# generateFrames('./videos/matrix.mp4', True)
+# generateFrames('./videos/amaterasu.mp4', True)
